@@ -1,4 +1,4 @@
-public class Star extends CelestialBody {
+public class Star extends CelestrialBody {
     double luminosity;
 
     public void displayInfo() {

@@ -1,10 +1,20 @@
-java.util.ArrayList;
+import java.util.ArrayList;
 
 public class SolarSystem {
-    ArrayList<Planet> solarSystem;
+    static ArrayList<Planet> solarSystem;
 
-    public void addPlanetToSystem(Planet planet) {
+    public static void addPlanetToSystem(Planet planet) {
         solarSystem.add(planet);
     }
-    public void addMoodToPlanet(Moon )
+    public static void addMoonToPlanet(Planet planet, Moon moon) {
+        planet.moons.add(moon);
+    }
+
+    public static void main(String[] args) {
+        Planet earth = new Planet(5e9, 3e23);
+        Moon moon = new Moon(1e6, 1e8, 2e2);
+        addMoonToPlanet(earth, moon);
+
+        addPlanetToSystem(earth);
+    }
 }
