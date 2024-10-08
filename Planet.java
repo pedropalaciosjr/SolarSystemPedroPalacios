@@ -8,8 +8,9 @@ public class Planet extends CelestrialBody implements Orbitable {
     double starMass;
 
     public Planet(double starMass, double distanceFromStar) {
-        this.starMass = starMass;
-        this.distanceFromStar = distanceFromStar;
+        moons = new ArrayList<>();
+        mass = starMass;
+        radius = distanceFromStar;
         GRAVITATIONAL_CONST = 6.674e-11;
     }
 
@@ -25,6 +26,7 @@ public class Planet extends CelestrialBody implements Orbitable {
 
     @Override
     public void displayInfo() {
-        System.out.printf("Planet's name: %s\nMass: %d\nRadius: %d\nMoons: %d\n", name, starMass, radius, moons);
+        System.out.printf("Planet's name: %s\nMass: %e\nRadius: %e\nMoons: %s\n", name, mass, radius, moons.toString());
     }
+
 }
