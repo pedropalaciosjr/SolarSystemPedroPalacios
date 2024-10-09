@@ -5,12 +5,14 @@ public class Moon implements Orbitable {
     private final double distanceFromStar;
     private final double GRAVITATIONAL_CONST;
     private final double mass;
+    String name;
 
-    public Moon(double distanceFromPlanet, double distanceFromStar, double mass) {
+    public Moon(String name, double distanceFromPlanet, double distanceFromStar, double mass) {
         this.distanceFromPlanet = distanceFromPlanet;
         this.GRAVITATIONAL_CONST = 6.674e-11;
         this.distanceFromStar = distanceFromStar;
         this.mass = mass;
+        this.name = name;
     }
 
     @Override
